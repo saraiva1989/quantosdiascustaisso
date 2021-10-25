@@ -14,7 +14,7 @@ Seu dia de trabalho vale **R$90,90**. Para adquirir esse produto você precisar�
 # Como usar o projeto
 Esse projeto é simples, é apenas uma pagina HTML, CSS e JAVASCRIPT. Então basta subir esses arquivos em um servidor de hospedagem e seja feliz, projeto no ar.
 
-veja uma demo do projeto em https://quantosdiascustaisso.saraiva89.com
+veja uma demo do projeto em https://saraiva1989.github.io/quantosdiascustaisso/
 
 # Como contribuir com o projeto
 Para contribuir com o projeto é muito simples
