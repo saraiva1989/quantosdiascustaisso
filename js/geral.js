@@ -17,7 +17,7 @@ function CalcularQuantoDiasCusta() {
         <b>R$${valorDiaTrabalho.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}.</b> 
     </p>
     <p>
-        Para adquirir esse produto você precisará trabalhar <b>${quantoDiasCusta}</b> dias (sem gastar nada).
+        Para adquirir esse produto você precisará trabalhar aproximadamente <b>${Math.round(quantoDiasCusta)}</b> dias (sem gastar nada).
     </p>`
     divResultado.innerHTML = retorno
 }
