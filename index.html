@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/geral.css">
+    <title>Quantos dias custa isso?</title>
+</head>
+
+<body>
+    <div class="principal">
+        <div class="formulario">
+            <div class="header">
+                <h1>Quantos dias custa isso?</h1>
+                <p>
+                    Esse projeto é uma calculadora que irá calcular quantos dias do seu trabalho custa para comprar
+                    algo.
+                </p>
+                <p>
+                    No formulário você informa o seu salario, quantos dias trabalha por mês e o valor do produto que
+                    deseja comprar. Por exemplo:
+                </p>
+            </div>
+            <form onsubmit="return false">
+                <p>
+                    <input type="number" placeholder="Seu salário" id="salario" name="quantity" min="1" required>
+                </p>
+                <p>
+                    <input type="text" placeholder="Quantos dias trabalha por mês" id="dias-trabalho"
+                        pattern="[0-9]{1,2}" title="Quantidade de dias (1 a 31)" required>
+                </p>
+                <p>
+                    <input type="number" placeholder="valor produto que irá comprar" id="valor-produto" name="quantity"
+                        min="1" required>
+                </p>
+                <p>
+                    <input class="btn" type="submit" name="submit" value="Calcular" onclick="CalcularQuantoDiasCusta()" />
+                </p>
+            </form>
+            <div id="resultado" class="resultado"></div>
+        </div>
+    </div>
+
+    <script src="js/geral.js"></script>
+</body>
+
+</html>
