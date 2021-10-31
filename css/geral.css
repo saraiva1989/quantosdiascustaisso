@@ -1,6 +1,25 @@
+:root {
+    --background-body-color: #00000011;
+    --border-input-color: #00000022;
+    --color-box-shadow: #00000033;
+    --backgroud-formulario: #ffffff;
+    --background-botao: #1c74ec;
+    --cor-texto-botao: #ffffff;
+    --cor-botao-hover: #1c5cbc;
+    --cor-texto: #000000;
+    --fundo-input: #ffffff;
+    --cor-input: #000000;
+    --placeholder-input: #383434;
+  }
+
 body {
-    background: #00000011;
+    background: var(--background-body-color)
 }
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: var(--placeholder-input);
+    opacity: 0.6; /* Firefox */
+  }
 
 .principal {
     width: 100%;
@@ -10,26 +29,32 @@ body {
     width: 300px;
     height: 28px;
     border-radius: 5px;
-    border: solid 1px #00000022;
+    border: solid 1px var(--border-input-color);
+    background: var(--fundo-input);
+    color: var(--cor-input);
+
 }
 
 .formulario {
     margin: 0% 20%;
-    box-shadow: 0px 4px 8px 0 #00000033;
+    box-shadow: 0px 4px 8px 0 var(--color-box-shadow);
     padding: 30px;
-    background: #ffffff;
+    background: var(--backgroud-formulario);
 }
 
 .btn {
-    background: #1c74ec;
-    color: #ffffff;
+    background: var(--background-botao) !important;
+    color: var(--cor-texto-botao) !important;
 
 }
 
 .btn:hover {
     transition: 0.5s;
+    background: var(--cor-botao-hover);
+}
 
-    background: #1c5cbc;
+.link-github {
+    text-align: center;
 }
 
 input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
@@ -45,6 +70,15 @@ input[type=number] {
 
 .header h1, p {
     text-align: center;
+    color: var(--cor-texto);
+}
+
+input {
+    font-size: 16px;
+  }
+  
+p {
+    font-size: 18px;
 }
 
 
