@@ -9,7 +9,7 @@ No formulário você informa o seu salario, quantos dias trabalha por mês e o v
 
 Ao adicionar esses valores no formulário e clicar em calcular, irá mostrar o seguinte resumo:
 
-Seu dia de trabalho vale **R$90,90**. Para adquirir esse produto você precisará trabalhar 104 dias (sem gastar nada).
+Seu dia de trabalho vale **R$90,90**. Para adquirir esse produto você precisará trabalhar 105 dias (sem gastar nada).
 
 # Como usar o projeto
 Esse projeto é simples, é apenas uma pagina HTML, CSS e JAVASCRIPT. Então basta subir esses arquivos em um servidor de hospedagem e seja feliz, projeto no ar.
