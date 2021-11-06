@@ -1,3 +1,15 @@
+GetModoNoturno()
+
+function GetModoNoturno(){
+    let statusOS = window.matchMedia('(prefers-color-scheme: dark)').matches
+    let status = JSON.parse(localStorage.getItem('darkMode'))
+    if(status == null) {
+        status = statusOS
+    }
+    document.querySelector('#night-mode').checked = status
+    modoNoturno(status)
+}
+
 function CalcularQuantoDiasCusta() {
     let salario = document.getElementById('salario').value
     let diasTrabalho = document.getElementById('dias-trabalho').value
@@ -37,36 +49,13 @@ function validaCamposPreenchido(arrayCampos) {
 }
 
 function modoNoturno(status) {
-    let estilo = document.documentElement.style
+    localStorage.setItem('darkMode', status)
     if (status) {
-        estilo.setProperty('--background-body-color', '#060606');
-        estilo.setProperty('--border-input-color', '#ffffff22');
-        estilo.setProperty('--color-box-shadow', '#ffffff33');
-        estilo.setProperty('--backgroud-formulario', '#0c0c0c');
-        estilo.setProperty('--background-botao', '#1c74ec');
-        estilo.setProperty('--cor-texto-botao', '#ffffff');
-        estilo.setProperty('--cor-botao-hover', '#1c5cbc');
-        estilo.setProperty('--cor-texto', '#e1d7d7');
-        estilo.setProperty('--fundo-input', '#383434');
-        estilo.setProperty('--cor-input', '#ffffff');
-        estilo.setProperty('--placeholder-input', '#ffffff');
+        document.querySelector('.principal').classList.add('dark')
         document.querySelector('.link-github img').src = 'https://img.shields.io/badge/GitHub-ffffff?style=for-the-badge&logo=github&logoColor=black'
         return
     }
 
-    estilo.setProperty('--background-body-color', '#00000011');
-    estilo.setProperty('--border-input-color', '#00000022');
-    estilo.setProperty('--color-box-shadow', '#00000033');
-    estilo.setProperty('--backgroud-formulario', '#ffffff');
-    estilo.setProperty('--background-botao', '#1c74ec');
-    estilo.setProperty('--cor-texto-botao', '#ffffff');
-    estilo.setProperty('--cor-botao-hover', '#1c5cbc');
-    estilo.setProperty('--cor-texto', '#000000');
-    estilo.setProperty('--cor-texto-botao', '#ffffff');
-    estilo.setProperty('--cor-botao-hover', '#1c5cbc');
-    estilo.setProperty('--cor-texto', '#000000');
-    estilo.setProperty('--fundo-input', '#ffffff');
-    estilo.setProperty('--cor-input', '#000000');
-    estilo.setProperty('--placeholder-input', '#383434');
+    document.querySelector('.principal').classList.remove('dark')
     document.querySelector('.link-github img').src = 'https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white'
 }

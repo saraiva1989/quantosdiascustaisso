@@ -1,4 +1,4 @@
-:root {
+  body .principal:not(.dark) {
     --background-body-color: #00000011;
     --border-input-color: #00000022;
     --color-box-shadow: #00000033;
@@ -12,8 +12,22 @@
     --placeholder-input: #383434;
   }
 
+  body .principal.dark {
+    --background-body-color: #060606;
+    --border-input-color: #ffffff22;
+    --color-box-shadow: #ffffff33;
+    --backgroud-formulario: #0c0c0c;
+    --background-botao: #1c74ec;
+    --cor-texto-botao: #ffffff;
+    --cor-botao-hover: #1c5cbc;
+    --cor-texto: #e1d7d7;
+    --fundo-input: #383434;
+    --cor-input: #ffffff;
+    --placeholder-input: #ffffff;
+  }
+
 body {
-    background: var(--background-body-color)
+    margin: 0px;
 }
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
@@ -23,6 +37,10 @@ body {
 
 .principal {
     width: 100%;
+    height: 100%;
+    position: fixed;
+    overflow-y: auto;
+    background-color:  var(--background-body-color);
 }
 
 .formulario input {
